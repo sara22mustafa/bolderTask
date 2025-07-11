@@ -1,9 +1,9 @@
-import useCustomFonts from '@/components/useCustomFonts';
+import useCustomFonts from '@/config/useCustomFonts';
 import { ActivityIndicator, ScrollView, StyleSheet, View } from 'react-native';
-import Footer from '../components/Footer';
-import HeroSection from '../components/HeroSection';
-import ProjectsSection from '../components/ProjectsSection';
-import ServicesSection from '../components/ServicesSection';
+import Footer from '../components/Footer/Footer';
+import HeroSection from '../components/HeroSection/HeroSection';
+import ProjectsSection from '../components/ProjectsSection/ProjectsSection';
+import ServicesSection from '../components/ServicesSection/ServicesSection';
 
 export default function Home() {
     const fontsLoaded = useCustomFonts();
