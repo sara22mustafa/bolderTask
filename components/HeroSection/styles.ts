@@ -3,13 +3,14 @@ import { useResponsiveScale } from '@/config/useResponsiveScale';
 import { StyleSheet } from 'react-native';
 
 
-export const useStyles = () => {
+export const useStyles = ({ height }: { height: number }) => {
   const { scaleHeight, scaleWidth, scale } = useResponsiveScale();
 
   return StyleSheet.create({
     container: {
       paddingHorizontal: scaleWidth(20),
-      height: scaleHeight(350),
+      //minHeight: height,
+       height: scaleHeight(350),
     },
     header: {
       flexDirection: 'row',
@@ -42,8 +43,8 @@ export const useStyles = () => {
     button: {
       backgroundColor: colors.secondaryBlack,
       borderRadius: scale(50),
-      paddingVertical: scale(8),
-      paddingHorizontal: scaleWidth(8),
+      paddingVertical: scaleHeight(6),
+      paddingHorizontal: scaleWidth(6),
       width: scaleWidth(100),
       justifyContent: 'center',
       alignItems: 'center',
@@ -64,7 +65,7 @@ export const useStyles = () => {
       justifyContent: 'center',
       alignItems: 'center',
       alignSelf: 'center',
-      marginVertical: scaleHeight(14),
+      marginVertical: scaleHeight(20),
     },
     title: {
       color: colors.gradientPink,
@@ -112,7 +113,14 @@ export const useStyles = () => {
       top: scaleHeight(60),
       left: '50%',
       transform: [{ translateX: -50 }],
-      zIndex: 1,
     },
+    animatedImg:{
+            width: 300,
+            height: 300,
+                  zIndex: 1,
+                        position: 'absolute',
+      bottom:400,
+      left: '50%',
+    }
   });
 };
