@@ -46,8 +46,7 @@ export const useStyles = ({ height }: { height: number }) => {
       paddingVertical: scaleHeight(6),
       paddingHorizontal: scaleWidth(6),
       width: scaleWidth(100),
-      justifyContent: 'center',
-      alignItems: 'center',
+      alignSelf: 'center',
     },
     buttonText: {
       fontFamily: 'Inter_24pt-Medium',

@@ -22,10 +22,14 @@
 export const colors = {
   primaryBlue: '#2463EB',
   secondaryBlack: '#0E0E0E',
+
   white: '#FFFFFF',
   gradientPink: '#FF00D9',
   lightBlueBackground: '#DFF0FF',
   lightBlueBorder: '#A6C2FF',
   textGray: '#737373',
+  black:'#000',
+  babyGray:'#E9EFFD',
+  lightGray:'#222222',
+  darkGray:'#505050'
 };
-

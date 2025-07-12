@@ -1,5 +1,5 @@
 import useCustomFonts from '@/config/useCustomFonts';
-import { ActivityIndicator, ScrollView, StyleSheet, View } from 'react-native';
+import { ActivityIndicator, KeyboardAvoidingView, Platform, ScrollView, StyleSheet, View } from 'react-native';
 import Footer from '../components/Footer/Footer';
 import HeroSection from '../components/HeroSection/HeroSection';
 import ProjectsSection from '../components/ProjectsSection/ProjectsSection';
@@ -16,12 +16,17 @@ export default function Home() {
     );
   }
   return (
-    <ScrollView style={styles.container}>
+    <KeyboardAvoidingView
+      behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+      style={styles.container}
+    >
+      <ScrollView contentContainerStyle={styles.container}>
       <HeroSection />
       <ServicesSection />
       <ProjectsSection />
       <Footer />
-    </ScrollView>
+      </ScrollView>
+    </KeyboardAvoidingView>
   );
 }
 

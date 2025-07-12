@@ -1,5 +1,6 @@
 import { StyleSheet } from 'react-native';
 import { useResponsiveScale } from '../../config/useResponsiveScale';
+import { colors } from '@/config/colors';
 
 export const useStyles = () => {
   const { scaleHeight, scaleWidth, scale } = useResponsiveScale();
@@ -9,18 +10,18 @@ export const useStyles = () => {
       flex: 1,
       paddingTop: scaleHeight(24),
       paddingHorizontal: scaleWidth(20),
-      backgroundColor: '#000',
+      backgroundColor: colors.black,
       justifyContent: 'space-evenly',
     },
     title: {
-      color: '#E9EFFD',
+      color:colors.babyGray,
       fontFamily: 'Inter_28pt-Medium',
       fontSize: scale(14),
       paddingBottom: scaleHeight(18),
       width: scaleWidth(300),
     },
     secondTitle: {
-      color: '#E9EFFD',
+      color:colors.babyGray,
       fontSize: scale(25),
       fontFamily: 'InterRegular',
       width: scaleWidth(300),
@@ -102,13 +103,13 @@ export const useStyles = () => {
       justifyContent: 'center',
     },
     text: {
-      color: '#fff',
+      color:colors.white,
       fontWeight: 'bold',
       fontSize: scale(14),
       marginBottom: scale(4),
     },
     description: {
-      color: '#bbb',
+      color:colors.babyGray,
       fontSize: scale(12),
     },
     borderWrapper: {

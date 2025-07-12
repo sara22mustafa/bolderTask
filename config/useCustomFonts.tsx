@@ -2,7 +2,7 @@ import { useFonts } from 'expo-font';
 
 export default function useCustomFonts() {
   const [fontsLoaded] = useFonts({
-    
+
     // Cairo fonts
     'Cairo-Bold': require('../assets/fonts/Cairo-Bold.ttf'),
     'Cairo-Regular': require('../assets/fonts/Cairo-Regular.ttf'),
@@ -46,9 +46,9 @@ export default function useCustomFonts() {
     'Inter_24pt-Medium': require('../assets/fonts/Inter_24pt-Medium.ttf'),
     'Inter_28pt-Bold': require('../assets/fonts/Inter_28pt-Bold.ttf'),
     'Inter_28pt-Medium': require('../assets/fonts/Inter_28pt-Medium.ttf'),
+    'Inter-Regular': require('../assets/fonts/Inter_24pt-Regular.ttf'),
 
     // 'Inter_24pt-MediumItalic': require('../assets/fonts/inter_24pt-MediumItalic.ttf'),
-    // 'Inter_24pt-Regular': require('../assets/fonts/inter_24pt-Regular.ttf'),
     // 'Inter_24pt-SemiBold': require('../assets/fonts/inter_24pt-SemiBold.ttf'),
     // 'Inter_24pt-SemiBoldItalic': require('../assets/fonts/inter_24pt-SemiBoldItalic.ttf'),
     // 'Inter_24pt-Thin': require('../assets/fonts/inter_24pt-Thin.ttf'),
