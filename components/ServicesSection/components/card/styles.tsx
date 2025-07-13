@@ -1,42 +1,12 @@
 import { StyleSheet } from 'react-native';
-import { useResponsiveScale } from '../../config/useResponsiveScale';
 import { colors } from '@/config/colors';
+import { useResponsiveScale } from '@/config/useResponsiveScale';
 
 export const useStyles = () => {
   const { scaleHeight, scaleWidth, scale } = useResponsiveScale();
 
   return StyleSheet.create({
-    container: {
-      flex: 1,
-      paddingTop: scaleHeight(24),
-      paddingHorizontal: scaleWidth(20),
-      backgroundColor: colors.black,
-      justifyContent: 'space-evenly',
-    },
-
-    // Titles
-    title: {
-      color: colors.babyGray,
-      fontFamily: 'Inter_28pt-Medium',
-      fontSize: scale(10),
-      paddingBottom: scaleHeight(6),
-      width: scaleWidth(300),
-    },
-    secondTitle: {
-      color: colors.babyGray,
-      fontSize: scale(14),
-      fontFamily: 'InterRegular',
-      paddingBottom: scaleHeight(8),
-    },
-    desc: {
-      color: colors.babyGray,
-      fontFamily: 'Inter_28pt-Medium',
-      fontSize: scale(10),
-      paddingBottom: scaleHeight(12),
-      width: scaleWidth(300),
-    },
-
-    // Cards
+    // Card container
     card: {
       borderRadius: scale(12),
       padding: scale(4),
@@ -53,17 +23,15 @@ export const useStyles = () => {
     },
     innerContainer: {
       flexDirection: 'row',
+      alignItems: 'center',
+      gap: scale(50),
     },
 
-    // Logo and Wrappers
+    // Logo and gradient box
     logo: {
       color: '#fff',
-      fontSize: scale(18),
-      fontWeight: 'bold',
-    },
-    logoGradient: {
-      padding: scale(2),
-      borderRadius: 9,
+      fontFamily: 'Cairo-Bold',
+      fontSize: 18,
     },
     logoBox: {
       padding: scale(6),
@@ -75,21 +43,35 @@ export const useStyles = () => {
       shadowRadius: 4,
       elevation: 6,
     },
+    logoGradient: {
+      borderRadius: 9,
+    },
     wrapper: {
-      padding: scale(4),
+      padding: scale(2),
       borderRadius: 9,
       marginBottom: scale(10),
       borderColor: colors.darkGray,
       borderWidth: 0.3,
+      height: scale(40),
     },
 
-    // Tags
+    // Icon wrapper
+    icon: {
+      width: scale(36),
+      height: scale(36),
+      alignItems: 'center',
+      justifyContent: 'center',
+      borderRadius: scale(9),
+      backgroundColor: 'transparent',
+      overflow: 'hidden',
+    },
+
+    // Tag section
     tagContainer: {
-      flexDirection: 'row',
-      flexWrap: 'wrap',
-      width: scaleWidth(200),
-      gap: scale(30),
-      marginBottom: scale(10),
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'flex-end',
+      gap: scale(4),
     },
     tag: {
       backgroundColor: '#222',
@@ -126,7 +108,7 @@ export const useStyles = () => {
       marginVertical: scale(6),
     },
 
-    // 🔷 Card content
+    // Card content
     cardTitle: {
       color: colors.white,
       fontFamily: 'Inter-Regular',
@@ -139,7 +121,6 @@ export const useStyles = () => {
       fontSize: scale(10),
     },
 
-    // Border
     borderWrapper: {
       padding: scale(9),
     },
