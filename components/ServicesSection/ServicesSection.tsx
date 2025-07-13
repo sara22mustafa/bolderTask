@@ -25,16 +25,27 @@ const Card: React.FC<CardProps> = ({
   const styles = useStyles();
 
   return (
-    <View style={styles.card}>
+    <View
+      style={styles.card}
+      accessible={true}
+      accessibilityRole="summary"
+      accessibilityLabel={`Card titled ${title}. ${description}`}
+    >
       <LinearGradient colors={['#1a1a1a', '#0d0d0d']} style={styles.innerCard}>
         <View style={styles.innerContainer}>
           {withLogo && (
-            <View style={styles.logoBox}>
+            <View
+              style={styles.logoBox}
+              accessible={true}
+              accessibilityLabel="Bolder logo"
+            >
               <Text style={styles.logo}>b.</Text>
             </View>
           )}
 
-          {/* {icons && (
+          {/* Optional icons, commented out */}
+          {/*
+          {icons && (
             <View style={styles.tagContainer}>
               {icons.map((icon: any, index: number) => (
                 <Text key={index} style={styles.tag}>
@@ -45,7 +56,11 @@ const Card: React.FC<CardProps> = ({
           )} */}
 
           {multipleTags && (
-            <View style={styles.tagWrapper}>
+            <View
+              style={styles.tagWrapper}
+              accessible={true}
+              accessibilityLabel={`Tags: ${multipleTags.join(', ')}`}
+            >
               <View style={styles.tagRow}>
                 <Text style={styles.tag}>{multipleTags[0]}</Text>
                 <Text style={styles.tag}>{multipleTags[1]}</Text>
@@ -60,11 +75,31 @@ const Card: React.FC<CardProps> = ({
             </View>
           )}
 
-          {oneTag && <Text style={styles.oneTag}>{oneTag}</Text>}
+          {oneTag && (
+            <Text
+              style={styles.oneTag}
+              accessibilityLabel={`Tag: ${oneTag}`}
+              accessibilityRole="text"
+            >
+              {oneTag}
+            </Text>
+          )}
         </View>
 
-        <Text style={styles.text}>{title}</Text>
-        <Text style={styles.description}>{description}</Text>
+        <Text
+          style={styles.text}
+          accessibilityRole="header"
+          accessibilityLabel={title}
+        >
+          {title}
+        </Text>
+        <Text
+          style={styles.description}
+          accessibilityRole="text"
+          accessibilityLabel={description}
+        >
+          {description}
+        </Text>
       </LinearGradient>
     </View>
   );
@@ -74,26 +109,46 @@ const ServicesSection = () => {
   const styles = useStyles();
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Services</Text>
-      <Text style={styles.secondTitle}>
-        Transform Your Business with AI Solutions
-      </Text>
-      <Text style={styles.title}>
-        A short paragraph giving more context on our services, what we actually
-        do.
+    <View
+      style={styles.container}
+      accessible={true}
+      accessibilityLabel="Services section"
+    >
+      <Text
+        style={styles.title}
+        accessibilityRole="header"
+        accessibilityLabel="Services"
+      >
+        Services
       </Text>
 
+      <Text
+        style={styles.secondTitle}
+        accessibilityLabel="Transform Your Business with AI Solutions"
+      >
+        Transform Your Business with AI Solutions
+      </Text>
+
+      <Text
+        style={styles.title}
+        accessibilityLabel="A short paragraph giving more context on our services, what we actually do."
+      >
+        A short paragraph giving more context on our services, what we actually do.
+      </Text>
+
+      {/* Cards below already have accessibility labels */}
       <Card
         withLogo
         title="Expert AI Consultation for Your Business"
         description="Our AI Consultation service provides insights and strategies tailored to your unique challenges."
       />
+
       <Card
         title="Innovative AI Solutions"
         description="We create cutting-edge AI products that drive efficiency and growth."
         multipleTags={['Design', 'Dev', 'SAAS', 'AI', 'HTML']}
       />
+
       <Card
         withLogo
         title="Solutions for Your AI Needs"
