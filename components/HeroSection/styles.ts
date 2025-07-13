@@ -2,7 +2,6 @@ import { colors } from '@/config/colors';
 import { useResponsiveScale } from '@/config/useResponsiveScale';
 import { StyleSheet } from 'react-native';
 
-
 export const useStyles = ({ height }: { height: number }) => {
   const { scaleHeight, scaleWidth, scale } = useResponsiveScale();
 
@@ -52,6 +51,7 @@ export const useStyles = ({ height }: { height: number }) => {
       fontFamily: 'Inter_24pt-Medium',
       color: colors.white,
       fontSize: 16,
+      textAlign:'center'
     },
     titleWrapper: {
       backgroundColor: colors.lightBlueBackground,

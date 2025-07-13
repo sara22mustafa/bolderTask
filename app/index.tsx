@@ -20,7 +20,7 @@ export default function Home() {
       behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
       style={styles.container}
     >
-      <ScrollView contentContainerStyle={styles.container}>
+      <ScrollView contentContainerStyle={styles.container} showsVerticalScrollIndicator={false}>
       <HeroSection />
       <ServicesSection />
       <ProjectsSection />
