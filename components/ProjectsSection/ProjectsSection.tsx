@@ -12,7 +12,7 @@ const ProjectsSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const scrollRef = useRef<ScrollView>(null);
 
-const scrollToCard = (index: number) => {
+  const scrollToCard = (index: number) => {
   if (index >= 0 && index < cards.length) {
     const cardWidth = width - scale(25);
     const horizontalMargin = (width - cardWidth) / 2; // leftover space to center
@@ -54,8 +54,8 @@ const scrollToCard = (index: number) => {
         showsHorizontalScrollIndicator={false}
       >
         {cards.map((card, index) => (
-          <LinearGradient colors={colors.gradient} style={styles.gradientBorder}>
-          <View key={index} style={styles.card}>
+          <LinearGradient key={index}  colors={colors.gradient} style={styles.gradientBorder}>
+          <View style={styles.card}>
             <View style={{ flex: 1, justifyContent: 'space-between' }}>
               <View>
                 <View style={styles.row}>

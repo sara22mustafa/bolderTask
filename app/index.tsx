@@ -4,9 +4,18 @@ import Footer from '../components/Footer/Footer';
 import HeroSection from '../components/HeroSection/HeroSection';
 import ProjectsSection from '../components/ProjectsSection/ProjectsSection';
 import ServicesSection from '../components/ServicesSection/ServicesSection';
+import { useEffect } from 'react';
+import { Asset } from 'expo-asset';
 
 export default function Home() {
     const fontsLoaded = useCustomFonts();
+    useEffect(() => {
+  Asset.loadAsync([
+    require('../assets/images/background.png'),
+    require('../assets/images/intro.png'),
+  ]);
+}, []);
+
 
   if (!fontsLoaded) {
     return (

@@ -16,15 +16,18 @@ export const useStyles = () => {
       fontFamily: 'Inter_28pt-Medium',
       fontSize: scale(10),
       color: colors.gray,
-      paddingTop: scale(12),
-      paddingBottom: scale(8),
+      paddingTop: scale(18),
+      paddingBottom: scale(6),
+      paddingHorizontal:scale(14)
     },
 
     secondTitle: {
       fontFamily: 'Inter-Regular',
-      fontSize: scale(16),
+      fontSize: scale(14),
       color: colors.lightGray,
       paddingBottom: scale(16),
+            paddingHorizontal:scale(14)
+
     },
 
     card: {
@@ -39,7 +42,8 @@ export const useStyles = () => {
       flexDirection: 'row',
       paddingBottom: scale(14),
       alignItems: 'center',
-      justifyContent: 'space-between',
+      gap:scale(4)
+      // justifyContent: 'space-between',
     },
 
     text: {

@@ -9,7 +9,7 @@ export const useStyles = ({ height }: { height: number }) => {
     container: {
       paddingHorizontal: scaleWidth(20),
       //minHeight: height,
-       height: scaleHeight(350),
+       maxHeight: scaleHeight(320),
     },
     header: {
       flexDirection: 'row',
@@ -102,14 +102,11 @@ export const useStyles = ({ height }: { height: number }) => {
     background: {
       justifyContent: 'center',
       alignItems: 'center',
-      width: scaleWidth(300),
-      height: 300,
-      top: scale(-20),
-      left: scale(25),
+      height: scale(220),
     },
     imageButton: {
       position: 'absolute',
-      top: scaleHeight(60),
+      top: scaleHeight(25),
       left: '50%',
       transform: [{ translateX: -50 }],
     },
@@ -118,7 +115,7 @@ export const useStyles = ({ height }: { height: number }) => {
             height: 300,
                   zIndex: 1,
                         position: 'absolute',
-      bottom:400,
+      bottom:1800,
       left: '50%',
     }
   });

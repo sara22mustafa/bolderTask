@@ -1,15 +1,24 @@
 import MaskedView from "@react-native-masked-view/masked-view";
 import { LinearGradient } from "expo-linear-gradient";
 import React, { useEffect, useRef } from "react";
-import { Animated, Dimensions, Easing, ImageBackground, Text, View } from "react-native";
+import { Alert, Animated, Dimensions, Easing, ImageBackground, Linking, Text, TouchableOpacity, View } from "react-native";
 import { useStyles } from "./styles";
 
 const HeroSection = () => {
-  const animatedValue = useRef(new Animated.Value(150)).current; // starts below
-const fadeOutValue = useRef(new Animated.Value(1)).current; // fully visible
+const animatedValue = useRef(new Animated.Value(150)).current;
+const fadeOutValue = useRef(new Animated.Value(1)).current;
 const { height: screenHeight } = Dimensions.get('window');
-  const styles = useStyles({ height: screenHeight });
+const styles = useStyles({ height: screenHeight });
+const handleContactPress = () => {
+  const email = 'raheem.amer@bolder.fit'
+  const subject = 'Contact from Bolder App';
+  const body = 'Hi, I’d like to know more about your services.';
+  const url = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  Linking.openURL(url).catch(() =>
+  Alert.alert('Notice', 'This feature only works on a real mobile device.')
+);
 
+};
 
 useEffect(() => {
   Animated.parallel([
@@ -48,9 +57,9 @@ useEffect(() => {
           <Text style={styles.brandName}>bolder</Text>
           <Text style={styles.brandSuffix}>.fit</Text>
         </View>
-        <View style={[styles.button]}>
+        <TouchableOpacity style={[styles.button]} onPress={handleContactPress}>
           <Text style={styles.buttonText}>contact us</Text>
-        </View>
+        </TouchableOpacity>
       </View>
       <View style={styles.titleWrapper}>
         <Text style={styles.title}>Lorem ipsum</Text>
@@ -75,10 +84,12 @@ useEffect(() => {
       </Text>
       <ImageBackground
         source={require("../../assets/images/background.png")}
-        style={styles.background}
-        resizeMode="contain">
-        <View style={[styles.button, styles.secondButton, styles.imageButton]}>
+        style={[styles.background]}
+        resizeMode="cover">
+        <View style={styles.imageButton}>
+        <TouchableOpacity style={[styles.button,styles.secondButton]} onPress={handleContactPress}>
           <Text style={styles.buttonText}>contact us</Text>
+        </TouchableOpacity>
         </View>
       </ImageBackground>
     </View>
