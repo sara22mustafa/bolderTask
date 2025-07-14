@@ -29,14 +29,14 @@ A responsive, mobile-first app built with **React Native** and **Expo**, followi
 
 ✅ Setup Instructions
 
-# 1. Clone the repository
+ 1. Clone the repository
 git clone https://github.com/sara22mustafa/bolderTask
 cd bolder
 
-# 2. Install dependencies
+ 2. Install dependencies
 npm install
 
-# 3. Start the Expo development server
+3. Start the Expo development server
 npx expo start
 (Make sure you have Expo CLI installed globally: npm install -g expo-cli)
 
