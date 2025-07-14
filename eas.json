@@ -7,30 +7,15 @@
     "development": {
       "developmentClient": true,
       "distribution": "internal",
-      "android": {
-        "workflow": "managed"
-      },
-      "ios": {
-        "workflow": "managed"
-      }
+      "workflow": "managed"
     },
     "preview": {
       "distribution": "internal",
-      "android": {
-        "workflow": "managed"
-      },
-      "ios": {
-        "workflow": "managed"
-      }
+      "workflow": "managed"
     },
     "production": {
-      "android": {
-        "workflow": "managed"
-      },
-      "ios": {
-        "workflow": "managed"
-      },
-      "autoIncrement": true
+      "autoIncrement": true,
+      "workflow": "managed"
     }
   },
   "submit": {
