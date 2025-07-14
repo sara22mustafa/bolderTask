@@ -9,7 +9,7 @@ export const useStyles = () => {
   return StyleSheet.create({
     container: {
       paddingHorizontal: scaleWidth(20),
-      height: scaleHeight(350),
+      height: scaleHeight(370),
     },
 
     title: {
@@ -43,7 +43,6 @@ export const useStyles = () => {
       paddingBottom: scale(14),
       alignItems: 'center',
       gap:scale(4)
-      // justifyContent: 'space-between',
     },
 
     text: {

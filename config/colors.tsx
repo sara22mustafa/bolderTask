@@ -1,24 +1,3 @@
-// const tintColorLight = '#0a7ea4';
-// const tintColorDark = '#fff';
-
-// export const Colors = {
-//   light: {
-//     text: '#11181C',
-//     background: '#fff',
-//     tint: tintColorLight,
-//     icon: '#687076',
-//     tabIconDefault: '#687076',
-//     tabIconSelected: tintColorLight,
-//   },
-//   dark: {
-//     text: '#ECEDEE',
-//     background: '#151718',
-//     tint: tintColorDark,
-//     icon: '#9BA1A6',
-//     tabIconDefault: '#9BA1A6',
-//     tabIconSelected: tintColorDark,
-//   },
-// };
 export const colors = {
   primaryBlue: '#2463EB',
   secondaryBlack: '#0E0E0E',
@@ -35,9 +14,11 @@ export const colors = {
   blue:'#2463EB',
   lightServer:'#E8E8E8',
   darkServer:'#6B6B6B',
+  babyBlue:'#DFF0FF',
   gradient:[
   'rgba(1, 87, 255, 0.4)',
   'rgba(146, 79, 255, 0.4)',
   'rgba(253, 121, 25, 0.4)'
 ] as const,
+textGradient:["#E96231", "#FF00D9", "#74A7FF"] as const,
 };

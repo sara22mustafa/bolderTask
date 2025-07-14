@@ -2,14 +2,21 @@ import { colors } from '@/config/colors';
 import { useResponsiveScale } from '@/config/useResponsiveScale';
 import { StyleSheet } from 'react-native';
 
-export const useStyles = ({ height }: { height: number }) => {
+export const useStyles = ({
+  height,
+  colorsTheme,
+}: {
+  height: number;
+  colorsTheme: any;
+}) => {
   const { scaleHeight, scaleWidth, scale } = useResponsiveScale();
 
   return StyleSheet.create({
     container: {
       paddingHorizontal: scaleWidth(20),
-      //minHeight: height,
-       maxHeight: scaleHeight(320),
+      height: scale(390),
+      backgroundColor: colorsTheme.background,
+      paddingTop:35
     },
     header: {
       flexDirection: 'row',
@@ -38,9 +45,10 @@ export const useStyles = ({ height }: { height: number }) => {
     brandSuffix: {
       fontFamily: 'Cairo-Regular',
       fontSize: 20,
+      color: colorsTheme.text,
     },
     button: {
-      backgroundColor: colors.secondaryBlack,
+      backgroundColor: colorsTheme.bkgButton,
       borderRadius: scale(50),
       paddingVertical: scaleHeight(6),
       paddingHorizontal: scaleWidth(6),
@@ -49,12 +57,12 @@ export const useStyles = ({ height }: { height: number }) => {
     },
     buttonText: {
       fontFamily: 'Inter_24pt-Medium',
-      color: colors.white,
+      color: colorsTheme.textButton,
       fontSize: 16,
-      textAlign:'center'
+      textAlign: 'center',
     },
     titleWrapper: {
-      backgroundColor: colors.lightBlueBackground,
+      backgroundColor: colorsTheme.bkgButton2,
       paddingVertical: scaleHeight(4),
       paddingHorizontal: scaleWidth(2),
       width: scaleWidth(120),
@@ -73,6 +81,7 @@ export const useStyles = ({ height }: { height: number }) => {
     sectionTitle: {
       fontFamily: 'Inter_28pt-Bold',
       fontSize: 20,
+      color: colorsTheme.title,
     },
     subHeader: {
       fontFamily: 'Inter_28pt-Bold',
@@ -81,10 +90,10 @@ export const useStyles = ({ height }: { height: number }) => {
     paragraph: {
       fontFamily: 'Inter_28pt-Medium',
       fontSize: 16,
-      color: colors.textGray,
+      color: colorsTheme.desc,
       marginBottom: 12,
       textAlign: 'center',
-      width: scaleWidth(350),
+      width: scaleWidth(320),
     },
     secondButton: {
       alignSelf: 'center',
@@ -101,22 +110,31 @@ export const useStyles = ({ height }: { height: number }) => {
     },
     background: {
       justifyContent: 'center',
-      alignItems: 'center',
-      height: scale(220),
+      height: '100%',
     },
     imageButton: {
       position: 'absolute',
-      top: scaleHeight(25),
+      top: scale(70),
       left: '50%',
       transform: [{ translateX: -50 }],
     },
-    animatedImg:{
-            width: 300,
-            height: 300,
-                  zIndex: 1,
-                        position: 'absolute',
-      bottom:1800,
+    animatedImg: {
+      width: 300,
+      height: 300,
+      zIndex: 1,
+      position: 'absolute',
+      bottom: 100,
       left: '50%',
-    }
+    },
+    iconContainer: {
+      backgroundColor: colorsTheme.button,
+      padding: 4,
+      borderRadius: 8,
+      alignSelf: 'flex-end',
+    },
+    row: {
+      flexDirection: 'row',
+      gap: scale(2),
+    },
   });
 };

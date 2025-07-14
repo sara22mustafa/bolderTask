@@ -3,7 +3,7 @@ import { colors } from '@/config/colors';
 import { useResponsiveScale } from '@/config/useResponsiveScale';
 
 export const useStyles = () => {
-  const { scaleHeight, scaleWidth, scale } = useResponsiveScale();
+  const { scaleHeight, scale } = useResponsiveScale();
 
   return StyleSheet.create({
     // Card container
