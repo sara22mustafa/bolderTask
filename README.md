@@ -6,10 +6,15 @@ A responsive, mobile-first app built with **React Native** and **Expo**, followi
   ✅ Project Highlights 
   
   √ Framework : React Native (Expo)   
+  
   √ Animations & responsiveness across devices
+  
   √ Cross-device testing on iOS & Android
+  
   √ Accessibility labels, roles, tab navigation
+  
   √ Performance: app launch speed, animation smoothness
+  
   √ Pixel-perfect UI:Figma to code implementation
 
 -------------------------------------------------------
