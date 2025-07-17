@@ -19,7 +19,7 @@ A responsive, mobile-first app built with **React Native** and **Expo**, followi
 
 -------------------------------------------------------
 
-✅ screenVideo: https://drive.google.com/file/d/1BQmkTdnFwvNsziOizsOzE8onvX30D22G/view?usp=sharing
+✅ screenVideo: https://drive.google.com/file/d/1nnkogNWr6hNJ9V83-H5a_4Et_b5ap2H5/view?usp=sharing
 
 -------------------------------------------------------
 
