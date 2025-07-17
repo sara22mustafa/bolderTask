@@ -1,50 +1,44 @@
-# Welcome to your Expo app 👋
+✅  Bolder Services | React Native App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A responsive, mobile-first app built with **React Native** and **Expo**, following the approved **Figma** design, optimized for performance, animations, and cross-platform delivery.
 
-## Get started
+-------------------------------------------------------
+  ✅ Project Highlights 
+  
+  √ Framework : React Native (Expo)   
+  
+  √ Animations & responsiveness across devices
+  
+  √ Cross-device testing on iOS & Android
+  
+  √ Accessibility labels, roles, tab navigation
+  
+  √ Performance: app launch speed, animation smoothness
+  
+  √ Pixel-perfect UI:Figma to code implementation
 
-1. Install dependencies
+-------------------------------------------------------
 
-   ```bash
-   npm install
-   ```
+✅ screenVideo: https://drive.google.com/file/d/1BQmkTdnFwvNsziOizsOzE8onvX30D22G/view?usp=sharing
 
-2. Start the app
+-------------------------------------------------------
 
-   ```bash
-   npx expo start
-   ```
+✅ Android build (APK) :https://expo.dev/accounts/sara22mustafa/projects/bolder/builds/f58a80e1-f826-4ec1-bd2a-134065764454
 
-In the output, you'll find options to open the app in a
+-------------------------------------------------------   
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+✅ Setup Instructions
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+ 1. Clone the repository
+git clone https://github.com/sara22mustafa/bolderTask
+cd bolder
 
-## Get a fresh project
+ 2. Install dependencies
+npm install
 
-When you're ready, run:
+3. Start the Expo development server
+npx expo start
+(Make sure you have Expo CLI installed globally: npm install -g expo-cli)
 
-```bash
-npm run reset-project
-```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+-------------------------------------------------------
