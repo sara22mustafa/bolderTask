@@ -1,9 +1,9 @@
 import { colors } from '@/config/colors';
+import { useResponsiveScale } from '@/config/useResponsiveScale';
 import { LinearGradient } from 'expo-linear-gradient';
 import React, { useRef, useState } from 'react';
 import { Dimensions, ScrollView, Text, TouchableOpacity, View } from 'react-native';
 import { useStyles } from './styles';
-import { useResponsiveScale } from '@/config/useResponsiveScale';
 
 const ProjectsSection = () => {
   const styles = useStyles();
@@ -56,7 +56,7 @@ const ProjectsSection = () => {
         {cards.map((card, index) => (
           <LinearGradient key={index}  colors={colors.gradient} style={styles.gradientBorder}>
           <View style={styles.card}>
-            <View style={{ flex: 1, justifyContent: 'space-between' }}>
+            <View style={{ flex: 1, justifyContent: 'space-between'}}>
               <View>
                 <View style={styles.row}>
                   <Text style={styles.flag}>{card.tag}</Text>

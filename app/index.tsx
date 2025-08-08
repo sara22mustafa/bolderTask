@@ -1,15 +1,16 @@
-import { useEffect } from 'react';
+import useCustomFonts from '@/config/useCustomFonts';
 import { Asset } from 'expo-asset';
+import { useEffect } from 'react';
 import {
   ActivityIndicator,
   KeyboardAvoidingView,
   Platform,
+  SafeAreaView,
   ScrollView,
-  View,
   StatusBar,
+  View
 } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
-import useCustomFonts from '@/config/useCustomFonts';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import Footer from '../components/Footer/Footer';
 import HeroSection from '../components/HeroSection/HeroSection';
 import ProjectsSection from '../components/ProjectsSection/ProjectsSection';
@@ -20,16 +21,16 @@ import { useStyles } from './styles';
 function AppContent() {
   const { colorsTheme, theme } = useTheme();
   const styles = useStyles();
-
+ const insets = useSafeAreaInsets();
   return (
     <>
       <StatusBar
         barStyle={theme === 'dark' ? 'light-content' : 'dark-content'}
         backgroundColor={colorsTheme.background}
       />
-      <SafeAreaView style={styles.safeArea} edges={['left', 'right', 'bottom']}>
+      <SafeAreaView style={ {paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0}}>
         <KeyboardAvoidingView
-          behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+         behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
           style={styles.container}
         >
           <ScrollView

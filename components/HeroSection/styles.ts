@@ -16,7 +16,7 @@ export const useStyles = ({
       paddingHorizontal: scaleWidth(20),
       height: scale(390),
       backgroundColor: colorsTheme.background,
-      paddingTop:35
+       paddingTop:6
     },
     header: {
       flexDirection: 'row',
@@ -52,8 +52,7 @@ export const useStyles = ({
       borderRadius: scale(50),
       paddingVertical: scaleHeight(6),
       paddingHorizontal: scaleWidth(6),
-      width: scaleWidth(100),
-      alignSelf: 'center',
+     alignSelf: 'center',
     },
     buttonText: {
       fontFamily: 'Inter_24pt-Medium',
@@ -93,10 +92,7 @@ export const useStyles = ({
       color: colorsTheme.desc,
       marginBottom: 12,
       textAlign: 'center',
-      width: scaleWidth(320),
-    },
-    secondButton: {
-      alignSelf: 'center',
+      paddingHorizontal: scaleHeight(10),
     },
     inlineTextRow: {
       flexDirection: 'row',

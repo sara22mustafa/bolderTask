@@ -1,3 +1,5 @@
+import MaskedView from "@react-native-masked-view/masked-view";
+import { LinearGradient } from "expo-linear-gradient";
 import React, { useEffect, useRef } from "react";
 import {
   Alert,
@@ -10,8 +12,6 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
-import MaskedView from "@react-native-masked-view/masked-view";
-import { LinearGradient } from "expo-linear-gradient";
 
 import LightDark from "@/assets/svgs/LightDark";
 import { useTheme } from "@/context/ThemeContext";
@@ -124,7 +124,7 @@ const HeroSection = () => {
         >
           <View style={styles.imageButton}>
             <TouchableOpacity
-              style={[styles.button, styles.secondButton]}
+              style={styles.button}
               onPress={handleContactPress}
             >
               <Text style={styles.buttonText}>contact us</Text>

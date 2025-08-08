@@ -26,14 +26,15 @@ export const useStyles = () => {
       fontSize: scale(14),
       color: colors.lightGray,
       paddingBottom: scale(16),
-            paddingHorizontal:scale(14)
+      paddingHorizontal:scale(14)
 
     },
 
     card: {
-      width: width - 70,
-      borderRadius: 40,
+      width: width * 0.65,
+      maxWidth: 340,
       padding: scale(16),
+      borderRadius: 40,
       backgroundColor: 'white',
       flex: 1,
     },
